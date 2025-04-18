@@ -20,4 +20,5 @@ Route::get('/', function () {
 
 
 Route::resource('tasks', TaskController::class)->except('show');
-Route::post('tasks/reorder', [TaskController::class, 'reorder']);
+Route::post('project/store', [TaskController::class , 'store_project'])->name('project.store');
+Route::post('tasks/reorder', [TaskController::class, 'reorder'])->name('tasks.reorder');;
